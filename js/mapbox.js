@@ -6,9 +6,9 @@ TrelloPowerUp.initialize({
             {
                 icon: './images/icon-white.svg',
                 text: 'Mapbox',
-                callback: function (t) {
+                callback: function () {
                     console.log("no return test");
-                    t.model({
+                    TrelloPowerUp.iframe().model({
                         url: './index.html',
                         accentColor: '#F2D600', // Optional color for the modal header 
                         fullscreen: true
