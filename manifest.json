@@ -8,6 +8,7 @@
   "author": "Dixeran",
   "capabilities": [
     "board-buttons",
+    "card-badges",
     "callback"
   ],
   "connectors": {
