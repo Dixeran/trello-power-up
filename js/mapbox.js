@@ -35,7 +35,7 @@ TrelloPowerUp.initialize({
             console.log(CardName);
             return [
                 {
-                    dynamic: function () {
+                    dynamic: function (t) {
                         return new Promise((resolve, reject) => {
                             PlaceSearch.search(CardName, function (status, result) {
                                 var poi = result.poiList.pois[0].name + ";" + result.poiList.pois[0].address;
@@ -45,6 +45,9 @@ TrelloPowerUp.initialize({
                                     color: 'blue',
                                     refresh: 65535
                                 };
+                                t.getAll().then(function (data) {
+                                    console.log(data);
+                                });
                                 resolve(badges);
                             });
                         });
