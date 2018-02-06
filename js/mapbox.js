@@ -1,5 +1,14 @@
-var Promise = TrelloPowerUp.Promise;
-var aarg = 0;
+var Promise = TrelloPowerUp.Promise;//调用第三方Promise
+var MData = {
+    city: '',
+    pois: []
+}
+
+//高德地图搜索服务
+AMap.service('AMap.PlaceSearch',function(){
+    PlaceSearch = new AMap.PlaceSearch();
+})
+
 TrelloPowerUp.initialize({
     // 看板右上角按钮
     'board-buttons': function (t, options) {
@@ -22,23 +31,12 @@ TrelloPowerUp.initialize({
     },
     // 卡片标签
     'card-badges': function (t, options) {
-        console.log('in card-badges');
-        setInterval(function () {
-            aarg++;
-            console.log(aarg);
-        }, 1000);
         return t.card('name').get('name').then(function (CardName) {
             console.log(CardName);
-            return [
-                {
-                    text: 'test1',
-                    color: 'green'
-                },
-                {
-                    text: 'test2',
-                    color: 'red'
-                }
-            ];
+            PlaceSearch.search(CardName, function (status, result) {
+                var poi = result.pois[0].name + ";" + result.pois[0].address;
+                console.log(poi);
+            });
         })
     }
 });
