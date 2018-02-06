@@ -20,15 +20,18 @@ TrelloPowerUp.initialize({
     // 卡片标签
     'card-badges': function (t, options) {
         console.log('in card-badges');
-        return [
-            {
-                text: 'test1',
-                color: 'green'
-            },
-            {
-                text: 'test2',
-                color: 'red'
-            }
-        ]
+        return t.card('name').get('name').then(function (CardName) {
+            console.log(CardName);
+            return [
+                {
+                    text: 'test1',
+                    color: 'green'
+                },
+                {
+                    text: 'test2',
+                    color: 'red'
+                }
+            ];
+        })
     }
 });
