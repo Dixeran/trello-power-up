@@ -33,9 +33,14 @@ TrelloPowerUp.initialize({
     'card-badges': function (t, options) {
         return t.card('name').get('name').then(function (CardName) {
             console.log(CardName);
-            PlaceSearch.search(CardName, function (status, result) {
+            return PlaceSearch.search(CardName, function (status, result) {
                 var poi = result.poiList.pois[0].name + ";" + result.poiList.pois[0].address;
                 console.log(poi);
+                var badges = {
+                    text: result.poiList.pois[0].type,
+                    color: 'blue'
+                };
+                return [badges];
             });
         })
     }
