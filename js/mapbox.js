@@ -1,4 +1,4 @@
-var Promise = TrelloPowerUp.Promise;
+//var Promise = TrelloPowerUp.Promise;
 
 TrelloPowerUp.initialize({
     // 看板右上角按钮
