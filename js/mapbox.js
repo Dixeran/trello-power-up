@@ -9,7 +9,7 @@ TrelloPowerUp.initialize({
                 text: 'Mapbox',
                 callback: function (t) {
                     return t.modal({
-                        url: './index.html',
+                        url: './modal.html',
                         args: {
                             abarg: aarg
                         },
