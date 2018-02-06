@@ -18,7 +18,7 @@ TrelloPowerUp.initialize({
         ]
     },
     // 卡片标签
-    'card-gadges': function (t) {
+    'card-badges': function (t) {
         return t.card('name').get(name).then(function (CardName) {
             console.log(CardName);
             return new Promise(function (resolve) {
