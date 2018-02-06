@@ -19,7 +19,7 @@ TrelloPowerUp.initialize({
     },
     // 卡片标签
     'card-badges': function (t) {
-        return t.card('name').get(name).then(function (CardName) {
+        return t.card('name').get('name').then(function (CardName) {
             console.log(CardName);
             return new Promise(function (resolve) {
                 console.log('in Promise');
