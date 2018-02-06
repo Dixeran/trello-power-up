@@ -18,22 +18,19 @@ TrelloPowerUp.initialize({
         ]
     },
     // 卡片标签
-    'card-badges': function (t) {
+    'card-badges': function (t, options) {
         return t.card('name').get('name').then(function (CardName) {
             console.log(CardName);
-            return new Promise(function (resolve) {
-                console.log('in Promise');
-                resolve([
-                    {
-                        text: 'test1',
-                        color: null
-                    },
-                    {
-                        text: 'test2',
-                        color: "green"
-                    }
-                ]);
-            });
-        })
+            return [
+                {
+                    text: 'test1',
+                    color: null
+                },
+                {
+                    text: 'test2',
+                    color: "green"
+                }
+            ];
+        });
     }
 });
