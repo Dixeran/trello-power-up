@@ -34,7 +34,7 @@ TrelloPowerUp.initialize({
         return t.card('name').get('name').then(function (CardName) {
             console.log(CardName);
             PlaceSearch.search(CardName, function (status, result) {
-                var poi = result.pois[0].name + ";" + result.pois[0].address;
+                var poi = result.poiList.pois[0].name + ";" + result.poiList.pois[0].address;
                 console.log(poi);
             });
         })
