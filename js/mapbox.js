@@ -1,4 +1,8 @@
 //var Promise = TrelloPowerUp.Promise;
+var GLITCH_ICON = './images/glitch.svg';
+var WHITE_ICON = './images/icon-white.svg';
+var GRAY_ICON = './images/icon-gray.svg';
+
 var getBadges = function(t){
 return t.card('name')
 .get('name')
