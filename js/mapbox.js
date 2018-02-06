@@ -45,7 +45,7 @@ TrelloPowerUp.initialize({
                                     color: 'blue',
                                     refresh: 65535
                                 };
-                                console.log(t.getContex());
+                                console.log(t.getContext());
                                 resolve(badges);
                             });
                         });
