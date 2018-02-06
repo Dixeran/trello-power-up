@@ -33,5 +33,6 @@ document.addEventListener('click', function (e) {
 $(document).ready(function () {
     $('#log').on('click', function () {
         console.log(t.arg('abarg'));
+        console.log('test:' + t.arg('test'));
     })
 });

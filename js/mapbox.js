@@ -23,6 +23,7 @@ TrelloPowerUp.initialize({
     // 卡片标签
     'card-badges': function (t, options) {
         console.log('in card-badges');
+        t.arg('test', aarg);
         setTimeout(function () {
             aarg++;
         }, 1000);
