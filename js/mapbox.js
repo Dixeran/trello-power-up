@@ -38,14 +38,16 @@ TrelloPowerUp.initialize({
                     dynamic: function (t) {
                         return new Promise((resolve, reject) => {
                             PlaceSearch.search(CardName, function (status, result) {
-                                var poi = result.poiList.pois[0].name + ";" + result.poiList.pois[0].address;
+                                var poi = result.poiList.pois[0];
                                 console.log(poi);
                                 var badges = {
                                     text: result.poiList.pois[0].type,
                                     color: 'blue',
                                     refresh: 65535
                                 };
-                                console.log(t.getContext());
+                                var CardData = JSON.parse(JSON.stringify(poi));
+                                console.log(CardData);
+                                t.set('card', 'private', CardData);
                                 resolve(badges);
                             });
                         });
