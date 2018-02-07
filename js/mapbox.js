@@ -49,7 +49,7 @@ TrelloPowerUp.initialize({
                                 console.log(CardData);
                                 t.set('card', 'private', CardData);
                                 t.set('card', 'private', 'myValue', '19965');
-                                t.set('card', 'private', { CardData });
+                                //t.set('card', 'private', { CardData });
                                 resolve(badges);
                             });
                         });
