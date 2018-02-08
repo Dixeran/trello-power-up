@@ -20,7 +20,7 @@ TrelloPowerUp.initialize({
                     return t.modal({
                         url: './modal.html',
                         args: {
-                            abarg: aarg
+                            abarg: '1'
                         },
                         accentColor: '#F2D600', // Optional color for the modal header 
                         fullscreen: true
