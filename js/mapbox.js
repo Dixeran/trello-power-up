@@ -9,6 +9,10 @@ AMap.service('AMap.PlaceSearch',function(){
     PlaceSearch = new AMap.PlaceSearch();
 })
 
+PlaceSearch.search('南宁', function (status, result) {
+    console.log(status + JSON.stringify(result))
+})
+
 TrelloPowerUp.initialize({
     // 看板右上角按钮
     'board-buttons': function (t, options) {
